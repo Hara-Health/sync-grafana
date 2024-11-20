@@ -35,8 +35,8 @@ jobs:
         with:
           install_components: "kubectl, gke-gcloud-auth-plugin"
 
-      - name: Kubernetes Credentials
-        run: gcloud container clusters get-credentials ${{ env.CLUSTER_NAME }} --zone ${{ env.ZONE }} --project ${{ env.HOST_PROJECT_ID }}
+#      - name: Kubernetes Credentials
+#        run: gcloud container clusters get-credentials ${{ env.CLUSTER_NAME }} --zone ${{ env.ZONE }} --project ${{ env.HOST_PROJECT_ID }}
 
       - name: Docker login
         uses: docker/login-action@v1
